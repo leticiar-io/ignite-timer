@@ -20,12 +20,19 @@ const newCycleValidationShema = zod.object({
     .max(60, 'The cycle must be a maximum of 60 minutes'),
 })
 
-export function Home() {
-  const { register, handleSubmit, watch, formState } = useForm({
-    resolver: zodResolver(newCycleValidationShema),
-  })
+type NewCycleFormData = zod.infer<typeof newCycleValidationShema>
 
-  function handleCreateNewCycle(data: any) {
+export function Home() {
+  const { register, handleSubmit, watch, formState } =
+    useForm<NewCycleFormData>({
+      resolver: zodResolver(newCycleValidationShema),
+      defaultValues: {
+        task: '',
+        minutesAmount: 0,
+      },
+    })
+
+  function handleCreateNewCycle(data: NewCycleFormData) {
     console.log(data)
   }
 

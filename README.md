@@ -19,6 +19,10 @@ This project was developed using the following technologies:
 - [TypeScript](https://www.typescriptlang.org/)
 - [ViteJS](https://vitejs.dev/)
 - [Styled Components](https://styled-components.com/)
+- [Date-fns](https://www.npmjs.com/package/date-fns)
+- [Zod](https://zod.dev/)
+- [React Hook form](https://react-hook-form.com/)
+- [Immer](https://github.com/immerjs/immer)
 
 <br></br>
 

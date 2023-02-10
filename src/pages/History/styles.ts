@@ -11,6 +11,10 @@ export const HistoryContainer = styled.main`
     font-size: 1.5rem;
     color: ${(props) => props.theme['gray-100']};
   }
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+  }
 `
 
 export const HistoryList = styled.div`
@@ -22,6 +26,11 @@ export const HistoryList = styled.div`
     width: 100%;
     border-collapse: collapse;
     min-width: 600px;
+
+    @media (max-width: 768px) {
+      min-width: 50rem;
+    }
+
     th {
       background-color: ${(props) => props.theme['gray-600']};
       padding: 1rem;

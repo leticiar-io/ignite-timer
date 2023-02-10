@@ -11,6 +11,11 @@ export const FormContainer = styled.div`
   font-weight: bold;
 
   flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding-top: 1rem;
+  }
 `
 
 const BaseInput = styled.input`
@@ -33,6 +38,11 @@ const BaseInput = styled.input`
     opacity: 0.7;
     cursor: not-allowed;
   }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: 0 0.2rem;
+  }
 `
 
 export const TaskInput = styled(BaseInput)`
@@ -45,4 +55,9 @@ export const TaskInput = styled(BaseInput)`
 
 export const MinutesAmountInput = styled(BaseInput)`
   width: 4rem;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    width: 2rem;
+  }
 `
